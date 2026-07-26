@@ -1,0 +1,159 @@
+.products-section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  color: #334155;
+}
+
+.products-section .section-title {
+  background: linear-gradient(135deg, #00AEEF 0%, #2E3192 50%, #90278E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #2E3192;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.products-section .section-subtitle {
+  color: #475569 !important;
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 3.5rem auto;
+  line-height: 1.6;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 25px -2px rgba(0, 0, 0, 0.04), 0 0 3px rgba(0,0,0,0.02);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px -5px rgba(144, 39, 142, 0.12), 0 10px 25px -5px rgba(0, 174, 239, 0.1);
+  border-color: rgba(144, 39, 142, 0.3);
+}
+
+.product-card-border-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.25rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #00AEEF, #2E3192, #90278E);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.product-card:hover .product-card-border-glow {
+  opacity: 1;
+}
+
+.product-card-header {
+  margin-bottom: 1rem;
+}
+
+.product-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  box-shadow: 0 10px 20px -4px rgba(46, 49, 146, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover .product-icon-wrapper {
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 14px 28px -4px rgba(144, 39, 142, 0.5);
+}
+
+/* Authentic Vebaura Brand 3-color Gradient */
+.bg-vebaura-gradient {
+  background: linear-gradient(135deg, #00AEEF 0%, #2E3192 50%, #90278E 100%);
+}
+
+.product-icon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.product-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.product-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.25rem;
+}
+
+.product-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.feature-check-icon {
+  color: #00AEEF;
+  flex-shrink: 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover .feature-check-icon {
+  color: #90278E;
+  transform: scale(1.15);
+}

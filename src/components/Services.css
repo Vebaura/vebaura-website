@@ -1,0 +1,234 @@
+.services-section-dark {
+  padding: 7rem 0;
+  background: #081A34; /* Deep Enterprise Navy */
+  position: relative;
+  overflow: hidden;
+}
+
+.text-white { color: #ffffff !important; }
+.text-gray-300 { color: #cbd5e1 !important; }
+.mt-3 { margin-top: 0.75rem; }
+
+/* Background brand glowing bubbles */
+.services-glow-overlay {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.services-glow-overlay.glow-1 {
+  top: 10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: #00AEEF;
+}
+
+.services-glow-overlay.glow-2 {
+  bottom: 10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: #90278E;
+}
+
+.section-badge-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #00f2fe;
+  backdrop-filter: blur(10px);
+}
+
+.badge-sparkle {
+  color: #d946ef;
+}
+
+.services-grid-dark {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  margin-top: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  .services-grid-dark {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid-dark {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Glassmorphism Dark Card */
+.service-card-dark {
+  position: relative;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  padding: 2.5rem 2.25rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.service-card-dark:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(144, 39, 142, 0.25), 0 0 25px rgba(0, 174, 239, 0.15);
+  border-color: rgba(0, 174, 239, 0.4);
+}
+
+/* Authentic Vebaura Brand 3-color Gradient */
+.bg-vebaura-gradient {
+  background: linear-gradient(135deg, #00AEEF 0%, #2E3192 50%, #90278E 100%);
+}
+
+.service-icon-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  color: white;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px -4px rgba(0, 174, 239, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card-dark:hover .service-icon-dark {
+  transform: scale(1.1) rotate(6deg);
+  box-shadow: 0 15px 30px -4px rgba(144, 39, 142, 0.6);
+}
+
+.service-title-dark {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.service-desc-dark {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.service-highlights-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-grow: 1;
+}
+
+.service-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.highlight-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00AEEF;
+  box-shadow: 0 0 8px #00AEEF;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.service-card-dark:hover .highlight-bullet {
+  background: #d946ef;
+  transform: scale(1.4);
+  box-shadow: 0 0 10px #d946ef;
+}
+
+.service-btn-brand-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-btn-brand-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #00AEEF 0%, #2E3192 50%, #90278E 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.service-btn-brand-gradient:hover {
+  border-color: transparent;
+  box-shadow: 0 10px 20px -5px rgba(144, 39, 142, 0.5);
+  padding-left: 1.4rem;
+}
+
+.service-btn-brand-gradient:hover::before {
+  opacity: 1;
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.service-btn-brand-gradient:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.service-card-glow-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.25rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #00AEEF, #2E3192, #90278E);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.service-card-dark:hover .service-card-glow-border {
+  opacity: 1;
+}
