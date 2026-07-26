@@ -40,7 +40,7 @@ const Header = () => {
         {/* Logo Section */}
         <div className="header-logo-wrapper">
           <a href="#home" className="logo">
-            <img src="/assets/images/logo.png" alt="Vebaura Logo" className="logo-img" />
+            <img src="assets/images/logo.png" alt="Vebaura Logo" className="logo-img" />
           </a>
         </div>
         
