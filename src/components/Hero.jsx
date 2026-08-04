@@ -62,7 +62,7 @@ const Hero = () => {
         </div>
 
         {/* Right Content: 2D Flat Constellation Orbit */}
-        <div className="orbit-container hidden-mobile animate-fade-in" style={{ animationDelay: '600ms' }}>
+        <div className="orbit-container animate-fade-in" style={{ animationDelay: '600ms' }}>
           
           <div className="orbit-scene">
             
