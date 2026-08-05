@@ -4,22 +4,22 @@
   min-height: 100vh;
   align-items: center;
   overflow: hidden;
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
-  /* Deep, rich background based on the logo's Cyan, Dark Blue, and Purple */
-  background: radial-gradient(circle at 70% 50%, #15092a 0%, #0c1130 50%, #050814 100%);
+  /* Deep, sophisticated dark indigo & rich violet executive space theme */
+  background: radial-gradient(circle at 75% 35%, #21083b 0%, #0e112a 50%, #080b1b 85%, #04060f 100%);
 }
 
 .hero-network-bg {
   position: absolute;
   inset: 0;
-  opacity: 0.15;
-  /* CSS pattern for a dot grid network */
-  background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
-  background-size: 40px 40px;
+  opacity: 0.16;
+  /* CSS pattern for a subtle dot grid network */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+  background-size: 42px 42px;
   background-position: 0 0;
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+  mask-image: radial-gradient(circle at center, black, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 85%);
 }
 
 .hero-blobs-container {
@@ -35,28 +35,31 @@
   filter: blur(120px);
 }
 
+/* Subtle ambient cyan glow near top left (toned down to prevent over-lighting near Logo & Digital Aura) */
 .blob-cyan {
-  top: 10%;
+  top: 5%;
   left: -5%;
   width: 30rem;
   height: 30rem;
-  background: rgba(0, 174, 239, 0.15); /* Logo Cyan */
+  background: radial-gradient(circle, rgba(0, 174, 239, 0.12) 0%, rgba(59, 130, 246, 0.06) 65%, transparent 85%);
 }
 
+/* Deep purple & violet aura on bottom right */
 .blob-purple {
-  bottom: -10%;
+  bottom: -15%;
   right: -5%;
-  width: 35rem;
-  height: 35rem;
-  background: rgba(46, 49, 146, 0.2); /* Logo Dark Blue */
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, rgba(46, 49, 146, 0.12) 65%, transparent 85%);
 }
 
+/* Toned-down Magenta ambient glow in center-right */
 .blob-magenta {
-  top: 40%;
-  left: 40%;
-  width: 25rem;
-  height: 25rem;
-  background: rgba(144, 39, 142, 0.15); /* Logo Purple/Magenta */
+  top: 25%;
+  right: 10%;
+  width: 32rem;
+  height: 32rem;
+  background: radial-gradient(circle, rgba(217, 70, 239, 0.15) 0%, rgba(144, 39, 142, 0.08) 65%, transparent 85%);
 }
 
 .hero-content-container {
@@ -88,14 +91,14 @@
 .hero-badge-inner {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.35rem 0.85rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.45rem 1.15rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -105,44 +108,44 @@
 }
 
 .hero-title {
-  margin-top: 1.25rem;
-  font-size: clamp(2.25rem, 3.4vw, 3.25rem);
+  margin-top: 1.4rem;
+  font-size: clamp(2.6rem, 4.6vw, 4.4rem);
   font-weight: 800;
-  line-height: 1.16;
-  letter-spacing: -0.02em;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
   color: white;
   opacity: 0;
 }
 
 .hero-description {
-  margin-top: 1.25rem;
-  max-width: 32rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #d1d5db;
+  margin-top: 1.4rem;
+  max-width: 38rem;
+  font-size: 1.25rem;
+  line-height: 1.68;
+  color: #e2e8f0;
   opacity: 0;
 }
 
 .hero-actions {
-  margin-top: 1.75rem;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   opacity: 0;
 }
 
 .btn-explore {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   border-radius: 9999px;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.925rem;
-  font-weight: 600;
+  padding: 0.9rem 1.85rem;
+  font-size: 1.08rem;
+  font-weight: 700;
   color: white;
   background: var(--gradient-btn);
-  box-shadow: 0 15px 20px -5px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 15px 25px -5px rgba(139, 92, 246, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -153,37 +156,38 @@
 .btn-products {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.75rem 1.5rem;
-  font-size: 0.925rem;
-  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.9rem 1.85rem;
+  font-size: 1.08rem;
+  font-weight: 700;
   color: white;
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 }
 
 .btn-products:hover {
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .hero-trust-badges {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  font-size: 0.875rem;
-  color: #9ca3af;
+  gap: 1.75rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #cbd5e1;
   opacity: 0;
 }
 
 .trust-badge {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .trust-icon {
@@ -197,197 +201,281 @@
 }
 
 /* ========================================= */
-/* FLAT 2D CONSTELLATION ORBIT (COMPACT EXECUTIVE SIZE) */
+/* MODERN NEURAL NETWORK & FREE-FLOATING ORBITING PILLS */
 /* ========================================= */
 
-.orbit-container {
+.hero-visual-container {
   position: relative;
   width: 100%;
-  height: 420px;
+  height: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 5;
-  margin-top: 3.5rem; /* Pushes orbit cleanly below top navigation buttons */
+  margin-top: 0; /* Vertically centered opposite left text - ending downward drift! */
 }
 
-@media (max-width: 1023px) {
-  .orbit-container {
-    display: flex;
-    height: 360px;
-    margin-top: 2rem;
-    transform: scale(0.85);
-  }
-}
-
-@media (max-width: 640px) {
-  .orbit-container {
-    display: flex;
-    height: 310px;
-    margin-top: 1.5rem;
-    transform: scale(0.70);
-    transform-origin: center center;
-  }
-}
-
-@media (max-width: 400px) {
-  .orbit-container {
-    height: 270px;
-    transform: scale(0.58);
-  }
-}
-
-/* Base Scene (Flat 2D, Compact 360px Geometry) */
-.orbit-scene {
+/* Background Neural Mesh (Constellation Network Web) */
+.neural-network-bg {
   position: absolute;
-  width: 360px;
-  height: 360px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  pointer-events: none;
+  opacity: 0.85;
+  z-index: 1;
+  animation: gentle-drift 20s infinite ease-in-out alternate;
 }
 
-/* Faint Concentric Rings */
-.orbit-rings {
-  position: absolute;
+.network-svg {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
+  object-fit: cover;
 }
 
-.ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+@keyframes gentle-drift {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.03) translate(5px, -8px); }
+  100% { transform: scale(1) translate(0, 0); }
 }
 
-.ring-1 { width: 160px; height: 160px; }
-.ring-2 { width: 260px; height: 260px; }
-.ring-3 { width: 360px; height: 360px; border: 1px dashed rgba(255, 255, 255, 0.15); }
+.pulse-slow { animation: pulse-node 4s infinite ease-in-out alternate; }
+.pulse-medium { animation: pulse-node 3s infinite ease-in-out alternate 1s; }
+.pulse-fast { animation: pulse-node 2s infinite ease-in-out alternate 0.5s; }
 
-/* The Central White Hub (Logo) */
-.orbit-center-hub {
-  position: absolute;
-  width: 105px;
-  height: 105px;
-  background: #ffffff;
-  border-radius: 50%;
+@keyframes pulse-node {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  100% { transform: scale(1.4); opacity: 1; filter: drop-shadow(0 0 6px #00AEEF); }
+}
+
+/* Multi-Layered Central Brand Hub (Glowing Aura Disk) */
+.center-brand-hub {
+  position: relative;
+  width: 270px;
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.3), inset 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
-.hub-text {
-  font-size: 1.2rem;
-  font-weight: 800;
+.hub-aura-glow {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.45) 0%, rgba(219, 39, 119, 0.25) 50%, rgba(0, 174, 239, 0) 80%);
+  filter: blur(8px);
+  animation: pulse-aura 6s infinite ease-in-out alternate;
+}
+
+@keyframes pulse-aura {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  100% { transform: scale(1.08); opacity: 1; }
+}
+
+.hub-glass-ring {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(0, 174, 239, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 45px rgba(139, 92, 246, 0.35), inset 0 0 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.hub-white-sphere {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 50px rgba(139, 92, 246, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.05);
+  z-index: 12;
+  transition: transform 0.3s ease;
+}
+
+.center-brand-hub:hover .hub-white-sphere {
+  transform: scale(1.05);
+}
+
+.hub-logo-text {
+  font-size: 1.95rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
   background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* The Orbit Path (Spins infinitely) */
-.orbit-path {
+/* ========================================= */
+/* 360° ROTATING ORBIT SYSTEM (FREE-FLOATING, NO INTERSECTING LINES) */
+/* ========================================= */
+
+.orbit-rotating-ring {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  animation: orbit-spin 40s infinite linear;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: orbit-continuous-spin 42s infinite linear;
+  z-index: 11;
 }
 
-.orbit-path:hover {
+.orbit-rotating-ring:hover,
+.orbit-rotating-ring:hover .planet-pill {
   animation-play-state: paused;
 }
 
-/* Pause child animations when path is hovered */
-.orbit-path:hover .planet-pill {
-  animation-play-state: paused;
-}
-
-@keyframes orbit-spin {
+@keyframes orbit-continuous-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* Planets Container (Positioned on the circle) */
+/* Rotating Orbit Planets (Placed on the 196px circle radius to clear the central glowing hub) */
 .orbit-planet {
   position: absolute;
-  width: 132px; /* Sleek compact width */
-  height: 38px;  /* Sleek compact height */
+  width: 146px;
+  height: 42px;
   left: 50%;
   top: 50%;
-  margin-top: -19px;
-  margin-left: -66px;
+  margin-top: -21px;
+  margin-left: -73px;
+  z-index: 15;
 }
 
-/* Math for 6 planets around the 360px circle (radius = 180px) */
-.planet-1 { transform: rotate(0deg) translateX(180px); }
-.planet-2 { transform: rotate(60deg) translateX(180px); }
-.planet-3 { transform: rotate(120deg) translateX(180px); }
-.planet-4 { transform: rotate(180deg) translateX(180px); }
-.planet-5 { transform: rotate(240deg) translateX(180px); }
-.planet-6 { transform: rotate(300deg) translateX(180px); }
+.planet-1 { transform: rotate(0deg) translateX(196px); }
+.planet-2 { transform: rotate(60deg) translateX(196px); }
+.planet-3 { transform: rotate(120deg) translateX(196px); }
+.planet-4 { transform: rotate(180deg) translateX(196px); }
+.planet-5 { transform: rotate(240deg) translateX(196px); }
+.planet-6 { transform: rotate(300deg) translateX(196px); }
 
-/* The actual Pill-shaped Card */
+/* The Sleek Pill-Shaped Planet Card (With Continuous Counter-Rotation) */
 .planet-pill {
   width: 100%;
   height: 100%;
   background: #ffffff;
-  border-radius: 9999px; /* Pill shape */
+  border-radius: 9999px;
   display: flex;
   align-items: center;
-  padding: 0.2rem 0.75rem 0.2rem 0.25rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  padding: 0.25rem 0.9rem 0.25rem 0.35rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25), 0 0 16px rgba(139, 92, 246, 0.35);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-/* 
-  Since the path rotates Z from 0 to 360, the pill must rotate Z from 0 to -360.
-  But each pill also has an offset (0, 60, 120...) that we must subtract.
-*/
-.planet-1 .planet-pill { animation: counter-1 40s infinite linear; }
-.planet-2 .planet-pill { animation: counter-2 40s infinite linear; }
-.planet-3 .planet-pill { animation: counter-3 40s infinite linear; }
-.planet-4 .planet-pill { animation: counter-4 40s infinite linear; }
-.planet-5 .planet-pill { animation: counter-5 40s infinite linear; }
-.planet-6 .planet-pill { animation: counter-6 40s infinite linear; }
+.planet-1 .planet-pill { animation: counter-rot-1 42s infinite linear; }
+.planet-2 .planet-pill { animation: counter-rot-2 42s infinite linear; }
+.planet-3 .planet-pill { animation: counter-rot-3 42s infinite linear; }
+.planet-4 .planet-pill { animation: counter-rot-4 42s infinite linear; }
+.planet-5 .planet-pill { animation: counter-rot-5 42s infinite linear; }
+.planet-6 .planet-pill { animation: counter-rot-6 42s infinite linear; }
 
-@keyframes counter-1 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
-@keyframes counter-2 { from { transform: rotate(-60deg); } to { transform: rotate(-420deg); } }
-@keyframes counter-3 { from { transform: rotate(-120deg); } to { transform: rotate(-480deg); } }
-@keyframes counter-4 { from { transform: rotate(-180deg); } to { transform: rotate(-540deg); } }
-@keyframes counter-5 { from { transform: rotate(-240deg); } to { transform: rotate(-600deg); } }
-@keyframes counter-6 { from { transform: rotate(-300deg); } to { transform: rotate(-660deg); } }
+@keyframes counter-rot-1 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+@keyframes counter-rot-2 { from { transform: rotate(-60deg); } to { transform: rotate(-420deg); } }
+@keyframes counter-rot-3 { from { transform: rotate(-120deg); } to { transform: rotate(-480deg); } }
+@keyframes counter-rot-4 { from { transform: rotate(-180deg); } to { transform: rotate(-540deg); } }
+@keyframes counter-rot-5 { from { transform: rotate(-240deg); } to { transform: rotate(-600deg); } }
+@keyframes counter-rot-6 { from { transform: rotate(-300deg); } to { transform: rotate(-660deg); } }
 
 .planet-pill:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+  transform: scale(1.1) !important;
+  box-shadow: 0 15px 32px rgba(139, 92, 246, 0.65), 0 0 25px rgba(0, 174, 239, 0.85);
+  filter: brightness(1.04);
+  z-index: 30;
 }
 
 .pill-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.85rem;
+  height: 1.85rem;
   border-radius: 50%;
   color: white;
-  margin-right: 0.5rem;
+  margin-right: 0.65rem;
   flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pill-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1e1b4b; /* Deep high-contrast indigo on white */
+  white-space: nowrap;
 }
 
 .bg-gradient-purple { background: linear-gradient(135deg, #90278E, #2E3192); }
 .bg-gradient-blue { background: linear-gradient(135deg, #00AEEF, #2E3192); }
 .bg-gradient-cyan { background: linear-gradient(135deg, #00AEEF, #2dd4bf); }
 
-.pill-title {
-  font-size: 0.76rem;
-  font-weight: 700;
-  color: #1a1a2e; /* Dark text for the white pill */
-  white-space: nowrap;
+/* ========================================================================= */
+/* UNIVERSAL RESPONSIVE MATRIX (FOR ALL LAPTOPS, DESKTOPS, MONITORS & PHONES) */
+/* ========================================================================= */
+
+/* Ultra-Wide Large Desktops & 4K/2K Monitors (1600px and up) */
+@media (min-width: 1600px) {
+  .hero-visual-container {
+    height: 520px;
+    transform: scale(1.08);
+    transform-origin: center center;
+  }
+}
+
+/* Standard Large Desktops & Gaming Laptops (1280px to 1599px) */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .hero-visual-container {
+    height: 480px;
+    transform: scale(0.95);
+    transform-origin: center center;
+    margin-top: -0.5rem;
+  }
+}
+
+/* Standard & Compact Laptops (e.g., 1366x768 or 1280x800 screens, 1024px to 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-visual-container {
+    height: 430px;
+    transform: scale(0.84);
+    transform-origin: center center;
+    margin-top: -1rem;
+  }
+}
+
+/* Tablets & Medium Notebooks (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-visual-container {
+    height: 400px;
+    margin-top: 1.5rem;
+    transform: scale(0.78);
+    transform-origin: center center;
+  }
+}
+
+/* Mobile Phones & Small Tablets (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero-visual-container {
+    height: 350px;
+    margin-top: 1rem;
+    transform: scale(0.66);
+    transform-origin: center center;
+  }
+}
+
+/* Compact & Mini Mobiles/Screens (Below 480px) */
+@media (max-width: 479px) {
+  .hero-visual-container {
+    height: 300px;
+    margin-top: 0.5rem;
+    transform: scale(0.54);
+    transform-origin: center center;
+  }
 }
