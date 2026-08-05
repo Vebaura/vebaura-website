@@ -7,7 +7,7 @@ const Services = () => {
 
   const services = [
     {
-      id: "web-dev",
+      id: "service-web-dev",
       title: "Website Development",
       desc: "Architecting high-performance, responsive web platforms and custom portals built with modern frameworks to deliver seamless scalability and blazing-fast loading speeds.",
       highlights: ["React, Next.js & Modern Stacks", "SEO & Core Web Vitals Optimized", "Enterprise Grade Security"],
@@ -15,52 +15,60 @@ const Services = () => {
       delay: "0ms"
     },
     {
-      id: "mobile-dev",
-      title: "Mobile App Development",
-      desc: "Engineering world-class native and cross-platform applications for iOS and Android, focusing on fluent user experiences, robust backend integration, and zero crashes.",
-      highlights: ["React Native & Flutter Solutions", "Smooth Biometrics & Hardware API", "Real-time Cloud Sync & Push Alert"],
+      id: "service-web-apps",
+      title: "Web & Mobile Applications",
+      desc: "Engineering world-class custom progressive web applications and native mobile software focusing on fluent experiences, robust APIs, and zero crashes.",
+      highlights: ["Custom Web Apps & Portals", "React Native & Flutter iOS/Android", "Real-time Cloud Sync & Push Alerts"],
       icon: <Smartphone size={26} />,
       delay: "100ms"
     },
     {
-      id: "ui-ux",
-      title: "UI / UX Design",
-      desc: "Crafting captivating, immersive digital experiences through intuitive design engineering, user behavior research, dynamic micro-interactions, and premium aesthetics.",
-      highlights: ["Figma Interactive Prototypes", "Deep User Research & Wireframing", "Modern Design Systems & Design Tokens"],
-      icon: <PenTool size={26} />,
+      id: "service-ecommerce",
+      title: "E-Commerce Solutions",
+      desc: "Developing high-conversion, scalable online retail platforms and custom marketplaces engineered with secure payment gateways and instantaneous inventory syncing.",
+      highlights: ["High-Conversion Online Stores", "Multi-Currency & Secure Gateways", "Automated Order Tracking Engine"],
+      icon: <TrendingUp size={26} />,
       delay: "200ms"
     },
     {
-      id: "cloud",
-      title: "Cloud Solutions",
-      desc: "Modernizing corporate infrastructure with distributed cloud computing, zero-downtime database migrations, microservices, and elastic serverless deployment strategies.",
-      highlights: ["AWS, GCP & Azure Architecture", "Auto-Scaling Microservices", "Cost Optimization & Disaster Recovery"],
-      icon: <Cloud size={26} />,
+      id: "service-billing",
+      title: "Billing & ERP Systems",
+      desc: "Custom enterprise accounting engines and smart Point of Sale billing architectures designed for rapid checkout, real-time analytics, and total tax compliance.",
+      highlights: ["Automated GST & Tax Invoicing", "Real-time Multi-branch Inventory", "Customizable Financial Dashboards"],
+      icon: <Settings size={26} />,
       delay: "300ms"
     },
     {
-      id: "devops",
-      title: "DevOps Services",
-      desc: "Automating end-to-end continuous integration and delivery (CI/CD) pipelines, containerization, and infrastructure as code to dramatically accelerate deployment velocity.",
-      highlights: ["Docker, Kubernetes & Terraform", "Zero-Downtime Automated CI/CD", "Comprehensive Logs & Monitoring"],
-      icon: <Settings size={26} />,
+      id: "service-cloud",
+      title: "Cloud & AWS Solutions",
+      desc: "Modernizing corporate infrastructure with distributed cloud computing on AWS, zero-downtime migrations, microservices, and elastic serverless deployment.",
+      highlights: ["AWS, GCP & Azure Architecture", "Auto-Scaling Microservices", "Disaster Recovery & Security"],
+      icon: <Cloud size={26} />,
       delay: "400ms"
     },
     {
-      id: "marketing",
-      title: "Digital Marketing",
-      desc: "Data-driven performance campaigns, omnichannel lead generation, SEO dominance, and high-conversion brand strategies designed to consistently multiply ROI.",
-      highlights: ["Targeted Omnichannel Campaigns", "SEO Dominance & Organic Traffic", "Advanced Conversion Rate Optimization"],
+      id: "service-marketing",
+      title: "Digital Marketing & SEO",
+      desc: "Data-driven performance marketing campaigns, omnichannel brand expansion, SEO dominance, and conversion optimization designed to consistently multiply ROI.",
+      highlights: ["Targeted Omnichannel Campaigns", "SEO Dominance & Organic Lead Gen", "Advanced Conversion Rate Optimization"],
       icon: <TrendingUp size={26} />,
       delay: "500ms"
     },
     {
-      id: "maintenance",
-      title: "Maintenance & Support",
-      desc: "Comprehensive 24/7 technical surveillance, security patch updates, proactive server maintenance, and instantaneous Bug Squashing to keep your enterprise running flawlessly.",
-      highlights: ["24/7 Dedicated Tech Support", "Proactive Security Vulnerability Patches", "Instant Performance Tuning & Backups"],
-      icon: <Wrench size={26} />,
+      id: "service-uiux",
+      title: "UI / UX Design",
+      desc: "Crafting captivating digital user experiences through deep user behavior research, dynamic micro-interactions, intuitive wireframing, and premium aesthetics.",
+      highlights: ["Figma Interactive Prototypes", "Modern Design Systems & Tokens", "High-Engagement UI Engineering"],
+      icon: <PenTool size={26} />,
       delay: "600ms"
+    },
+    {
+      id: "service-devops",
+      title: "DevOps & 24/7 Support",
+      desc: "Automating end-to-end continuous integration and delivery pipelines alongside comprehensive 24/7 technical surveillance, security patch updates, and maintenance.",
+      highlights: ["Zero-Downtime Automated CI/CD", "Docker, Kubernetes & Terraform", "24/7 Dedicated Technical Surveillance"],
+      icon: <Wrench size={26} />,
+      delay: "700ms"
     }
   ];
 

@@ -229,6 +229,14 @@
   pointer-events: none;
 }
 
-.service-card-dark:hover .service-card-glow-border {
+.service-card-dark:hover .service-card-glow-border,
+.service-card-highlight .service-card-glow-border {
   opacity: 1;
+}
+
+.service-card-highlight {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(144, 39, 142, 0.5), 0 0 35px rgba(0, 174, 239, 0.4) !important;
+  border-color: #00AEEF !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }

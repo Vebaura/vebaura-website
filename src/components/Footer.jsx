@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="footer-box contact-box">
           <h3>Get in Touch</h3>
           <p>Email: vebaura.tech@gmail.com</p>
-          <p>Chennai, Tamil Nadu, India</p>
+          <p>PB-3/5, Police Quarters, Vengadamangalam, TN - Chennai 600127.</p>
         </div>
 
       </div>

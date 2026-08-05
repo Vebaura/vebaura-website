@@ -46,12 +46,11 @@ const About = () => {
           {/* Right Content (Stats / Image) */}
           <div className={`about-stats-container ${sectionVisible ? 'animate-fade-left' : 'opacity-0'}`}>
             <div className="about-image-wrapper">
-              {/* Abstract / Graphic placeholder instead of a basic stock image */}
-              <div className="about-abstract-graphic">
-                <div className="abstract-circle c1"></div>
-                <div className="abstract-circle c2"></div>
-                <Shield size={64} className="abstract-icon" />
-              </div>
+              <img 
+                src="assets/images/about-tech-ecosystem.jpg" 
+                alt="Vebaura Enterprise Ecosystem Architecture" 
+                className="about-hero-img" 
+              />
             </div>
             
             <div className="stats-grid">

@@ -2,6 +2,29 @@ import { Sparkles, ArrowRight, CircleCheck, Globe, Monitor, ShoppingCart, Receip
 import './Hero.css';
 
 const Hero = () => {
+  const handlePlanetClick = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 90;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      element.classList.add('service-card-highlight');
+      setTimeout(() => {
+        element.classList.remove('service-card-highlight');
+      }, 2500);
+    } else {
+      const fallback = document.getElementById('services');
+      if (fallback) fallback.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="hero-section">
       {/* Network Constellation Background Layer */}
@@ -112,61 +135,73 @@ const Hero = () => {
             
             {/* Planet 1: Web Dev */}
             <div className="orbit-planet planet-1">
-              <div className="planet-pill">
-                <div className="pill-icon bg-gradient-blue">
-                  <Globe size={18} />
-                </div>
-                <span className="pill-title">Web Dev</span>
+              <div className="planet-counter-rot counter-1">
+                <a href="#service-web-dev" onClick={(e) => handlePlanetClick(e, 'service-web-dev')} className="planet-pill">
+                  <div className="pill-icon bg-gradient-blue">
+                    <Globe size={18} />
+                  </div>
+                  <span className="pill-title">Web Dev</span>
+                </a>
               </div>
             </div>
 
             {/* Planet 2: Web Apps */}
             <div className="orbit-planet planet-2">
-              <div className="planet-pill">
-                <div className="pill-icon bg-gradient-purple">
-                  <Monitor size={18} />
-                </div>
-                <span className="pill-title">Web Apps</span>
+              <div className="planet-counter-rot counter-2">
+                <a href="#service-web-apps" onClick={(e) => handlePlanetClick(e, 'service-web-apps')} className="planet-pill">
+                  <div className="pill-icon bg-gradient-purple">
+                    <Monitor size={18} />
+                  </div>
+                  <span className="pill-title">Web Apps</span>
+                </a>
               </div>
             </div>
 
             {/* Planet 3: E-Commerce */}
             <div className="orbit-planet planet-3">
-              <div className="planet-pill">
-                <div className="pill-icon bg-gradient-cyan">
-                  <ShoppingCart size={18} />
-                </div>
-                <span className="pill-title">E-Commerce</span>
+              <div className="planet-counter-rot counter-3">
+                <a href="#service-ecommerce" onClick={(e) => handlePlanetClick(e, 'service-ecommerce')} className="planet-pill">
+                  <div className="pill-icon bg-gradient-cyan">
+                    <ShoppingCart size={18} />
+                  </div>
+                  <span className="pill-title">E-Commerce</span>
+                </a>
               </div>
             </div>
 
             {/* Planet 4: Billing Software */}
             <div className="orbit-planet planet-4">
-              <div className="planet-pill">
-                <div className="pill-icon bg-gradient-blue">
-                  <Receipt size={18} />
-                </div>
-                <span className="pill-title">Billing Soft</span>
+              <div className="planet-counter-rot counter-4">
+                <a href="#service-billing" onClick={(e) => handlePlanetClick(e, 'service-billing')} className="planet-pill">
+                  <div className="pill-icon bg-gradient-blue">
+                    <Receipt size={18} />
+                  </div>
+                  <span className="pill-title">Billing Soft</span>
+                </a>
               </div>
             </div>
 
             {/* Planet 5: Cloud Solutions */}
             <div className="orbit-planet planet-5">
-              <div className="planet-pill">
-                <div className="pill-icon bg-gradient-purple">
-                  <Cloud size={18} />
-                </div>
-                <span className="pill-title">Cloud AWS</span>
+              <div className="planet-counter-rot counter-5">
+                <a href="#service-cloud" onClick={(e) => handlePlanetClick(e, 'service-cloud')} className="planet-pill">
+                  <div className="pill-icon bg-gradient-purple">
+                    <Cloud size={18} />
+                  </div>
+                  <span className="pill-title">Cloud AWS</span>
+                </a>
               </div>
             </div>
 
             {/* Planet 6: Digital Marketing */}
             <div className="orbit-planet planet-6">
-              <div className="planet-pill">
-                <div className="pill-icon bg-gradient-cyan">
-                  <TrendingUp size={18} />
-                </div>
-                <span className="pill-title">Marketing</span>
+              <div className="planet-counter-rot counter-6">
+                <a href="#service-marketing" onClick={(e) => handlePlanetClick(e, 'service-marketing')} className="planet-pill">
+                  <div className="pill-icon bg-gradient-cyan">
+                    <TrendingUp size={18} />
+                  </div>
+                  <span className="pill-title">Marketing</span>
+                </a>
               </div>
             </div>
 

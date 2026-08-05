@@ -138,14 +138,14 @@
 .btn-explore {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   border-radius: 9999px;
-  padding: 0.9rem 1.85rem;
-  font-size: 1.08rem;
-  font-weight: 700;
+  padding: 0.65rem 1.35rem;
+  font-size: 0.94rem;
+  font-weight: 600;
   color: white;
   background: var(--gradient-btn);
-  box-shadow: 0 15px 25px -5px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.25);
   transition: transform 0.3s ease;
 }
 
@@ -156,13 +156,13 @@
 .btn-products {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.06);
-  padding: 0.9rem 1.85rem;
-  font-size: 1.08rem;
-  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.65rem 1.35rem;
+  font-size: 0.94rem;
+  font-weight: 600;
   color: white;
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
@@ -330,7 +330,7 @@
 }
 
 .orbit-rotating-ring:hover,
-.orbit-rotating-ring:hover .planet-pill {
+.orbit-rotating-ring:hover .planet-counter-rot {
   animation-play-state: paused;
 }
 
@@ -358,7 +358,30 @@
 .planet-5 { transform: rotate(240deg) translateX(196px); }
 .planet-6 { transform: rotate(300deg) translateX(196px); }
 
-/* The Sleek Pill-Shaped Planet Card (With Continuous Counter-Rotation) */
+/* Dedicated Counter-Rotation Wrapper (Keeps pills 100% horizontal & right-side up at all times!) */
+.planet-counter-rot {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-1 { animation: counter-rot-1 42s infinite linear; }
+.counter-2 { animation: counter-rot-2 42s infinite linear; }
+.counter-3 { animation: counter-rot-3 42s infinite linear; }
+.counter-4 { animation: counter-rot-4 42s infinite linear; }
+.counter-5 { animation: counter-rot-5 42s infinite linear; }
+.counter-6 { animation: counter-rot-6 42s infinite linear; }
+
+@keyframes counter-rot-1 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+@keyframes counter-rot-2 { from { transform: rotate(-60deg); } to { transform: rotate(-420deg); } }
+@keyframes counter-rot-3 { from { transform: rotate(-120deg); } to { transform: rotate(-480deg); } }
+@keyframes counter-rot-4 { from { transform: rotate(-180deg); } to { transform: rotate(-540deg); } }
+@keyframes counter-rot-5 { from { transform: rotate(-240deg); } to { transform: rotate(-600deg); } }
+@keyframes counter-rot-6 { from { transform: rotate(-300deg); } to { transform: rotate(-660deg); } }
+
+/* The Sleek Pill-Shaped Planet Card (Interactive Service Direct-Link) */
 .planet-pill {
   width: 100%;
   height: 100%;
@@ -369,25 +392,12 @@
   padding: 0.25rem 0.9rem 0.25rem 0.35rem;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25), 0 0 16px rgba(139, 92, 246, 0.35);
   cursor: pointer;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  text-decoration: none !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
 }
 
-.planet-1 .planet-pill { animation: counter-rot-1 42s infinite linear; }
-.planet-2 .planet-pill { animation: counter-rot-2 42s infinite linear; }
-.planet-3 .planet-pill { animation: counter-rot-3 42s infinite linear; }
-.planet-4 .planet-pill { animation: counter-rot-4 42s infinite linear; }
-.planet-5 .planet-pill { animation: counter-rot-5 42s infinite linear; }
-.planet-6 .planet-pill { animation: counter-rot-6 42s infinite linear; }
-
-@keyframes counter-rot-1 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
-@keyframes counter-rot-2 { from { transform: rotate(-60deg); } to { transform: rotate(-420deg); } }
-@keyframes counter-rot-3 { from { transform: rotate(-120deg); } to { transform: rotate(-480deg); } }
-@keyframes counter-rot-4 { from { transform: rotate(-180deg); } to { transform: rotate(-540deg); } }
-@keyframes counter-rot-5 { from { transform: rotate(-240deg); } to { transform: rotate(-600deg); } }
-@keyframes counter-rot-6 { from { transform: rotate(-300deg); } to { transform: rotate(-660deg); } }
-
 .planet-pill:hover {
-  transform: scale(1.1) !important;
+  transform: scale(1.08) !important;
   box-shadow: 0 15px 32px rgba(139, 92, 246, 0.65), 0 0 25px rgba(0, 174, 239, 0.85);
   filter: brightness(1.04);
   z-index: 30;
